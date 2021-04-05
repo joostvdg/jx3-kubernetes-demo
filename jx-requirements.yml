@@ -6,10 +6,10 @@ spec:
     schedule: ""
   cluster:
     chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
-    clusterName: kind
+    clusterName: 
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
+    - joostvdg
+    environmentGitOwner: joostvdg
     gitKind: github
     gitName: github
     gitServer: https://github.com
@@ -20,13 +20,13 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: "pmgke.kearos.net"
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: "joostvdg@gmail.com"
+      enabled: true
+      production: true
   repository: bucketrepo
   secretStorage: local
   vault: {}
