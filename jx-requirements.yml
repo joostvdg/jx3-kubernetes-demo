@@ -6,7 +6,6 @@ spec:
     schedule: ""
   cluster:
     chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
-    clusterName: 
     devEnvApprovers:
     - joostvdg
     environmentGitOwner: joostvdg
@@ -17,16 +16,21 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: joostvdg
+    repository: jx3-kubernetes-demo
   - key: staging
   - key: production
   ingress:
-    domain: "pmgke.kearos.net"
+    domain: pmgke.kearos.net
     externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: "joostvdg@gmail.com"
+      email: joostvdg@gmail.com
       enabled: true
       production: true
+  pipelineUser:
+    username: joostvdg
   repository: bucketrepo
   secretStorage: local
   vault: {}
